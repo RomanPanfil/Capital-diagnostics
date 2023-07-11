@@ -1,0 +1,66 @@
+// Colors & BG's ---
+$bgc: #FFF;
+$font: #1D1D1D;
+$link: #51647B;
+$error: #FC8585;
+$like: #C74403;
+$primary: #1A3B9F;
+$error: #CB0000;
+
+// $link: $primary;
+
+$input_border: #CFDAE7;
+$input_hover: darken($input_border, 15%);
+$input_focus: $primary;
+
+$jq_border: #a3a3a3;
+$jq_hover: darken($jq_border,15%);
+$jq_focus: $primary;
+
+
+// Layouts
+$inner: 1460px;
+$gutter: 50px;
+$col_gutter: 15px;
+$block_margin: 0 0 25px;
+
+
+// Grid
+$breakpoints: ("xl":1440,"lg":1260,"md":1024,"sm":768,"xs":599,"us":320);
+
+
+// Typography ---
+$fontsize: 16;
+$weight: 400;
+$basefont: 'PT Sans Caption';
+$lh: 1.42;
+$th: 1.42;
+$paragraph_margin: 0px 0px 18px;
+
+// headings
+$headings_font_family: $basefont;
+$headings_margin: 40px 0px 40px;
+$headings_font_weight: 500;
+// $headings_color: $titles;
+$headings_text_transform: none;
+$h1: 140;
+$h2: 54;
+$h3: 40;
+$h4: 30;
+$h5: 24;
+$h6: $fontsize;
+
+$block_heading_font_size: 24;
+$block_heading_font_weight: 700;
+
+
+
+
+@mixin fz($f_size) {
+	font-size: $f_size + px;
+	font-size: $f_size/16 + rem;
+}
+
+@mixin ls($lsp) {
+	letter-spacing: $lsp/1000 + em;
+}
