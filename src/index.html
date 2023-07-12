@@ -12,6 +12,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="format-detection" content="telephone=no" />
 
+  <style>
+    @font-face {
+      font-family: 'Gilroy';
+      src: local('Gilroy'), local('Gilroy Extrabold'),
+        url('./fonts/gilroy/Gilroy-Extrabold.woff2') format('woff2'),
+        url('./fonts/gilroy/Gilroy-Extrabold.woff2') format('woff');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+  </style>
+
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -94,7 +107,7 @@
         <div class="container">
           <div class="appointment-title">
             <div class="h1">
-              Стресс-ЭхоКГ
+              Стресс-ЭхоКГ с ВЭМ
             </div>
             <div class="appointment-description">
               <span>в москве,</span> от кардиолога с <span>22-летним</span> стажем
@@ -139,8 +152,10 @@
                   <div class="title h3">
                     Записаться на прием
                   </div>
-                  <span class="text">Стоимость услуги</span>
-                  <span class="price">8000 ₽</span>
+                  <div class="price-wrapper">
+                    <span class="text">Стоимость услуги</span>
+                    <span class="price">8000 ₽</span>
+                  </div>
                 </div>
                 <div class="fields">
                   <label class=ui-field>
@@ -164,84 +179,88 @@
       </section>
 
       <section class="know">
-        <div class="container">
-          <div class="know-wrapper">
-            <div class="know-head">
-              <div class="h2 know-title">
-                Нужно знать
-              </div>
-              <div class="know-tabs">
-                <a href="javascript:void(0)" class="know-tabs-item">
-                  показания к проведению
-                </a>
-                <a href="javascript:void(0)" class="know-tabs-item">
-                  ограничения
-                </a>
-                <a href="javascript:void(0)" class="know-tabs-item important">
-                  противопоказания
-                </a>
-              </div>
-            </div>
-            <div class="know-content">
-              <div class="row">
-                <div class="col-md-6">
-                  <ul>
-                    <li>
-                      Диагностика ишемической болезни сердца (ИБС) 
-                    </li>
-                    <li>
-                      Оценка качества и эффективности лечения после реваскуляризации миокарда
-                    </li>
-                    <li>
-                      Предоперационная оценка риска перед проведением экстракардиальных операций (развитие инфаркта
-                      миокарда является одним из самых частых осложнений в ранний послеоперационный период у пациентов
-                      со средним и высоким риском)
-                    </li>
-                    <li>
-                      Оценка недостаточности клапанов
-                      (их гемодинамической значимости)*
-                    </li>
-                    <li>
-                      Оценка латентной обструкции ВТЛЖ” (выносящего тракта левого желудочка) при гипертрофии левого
-                      желудочка*
-                    </li>
-                  </ul>
+        <div class="know-inner">
+          <div class="container">
+            <div class="know-wrapper">
+              <div class="know-head">
+                <div class="h2 know-title">
+                  Нужно знать
                 </div>
-                <div class="col-md-6">
-                  <ul>
-                    <li>
-                      Неинформативная нагрузочная проба (наличие БЛНПГ” (блокада левых ножек пучка Гиса), электролитные
-                      нарушения, исходные изменения сегмента ST и т.д.) 
-                    </li>
-                    <li>
-                      Оценка прогноза и выработка тактики ведения пациентов с установленным диагнозом ИБС (особенно с
-                      ПИКС” (постинфарктный кардиосклероз))
-                    </li>
-                    <li>
-                      Определение бассейна стенозированной коронарной артерии перед проведением эндоваскулярного
-                      вмешательства
-                    </li>
-                    <li>
-                      Выявление возможных кардиальных причин в развитии одышки при физической нагрузке (особенно у
-                      пациентов с СД” (сахарный диабет))
-                    </li>
-                    <li>
-                      Оценка клапанных стенозов и функции протезированных клапанов*
-                    </li>
-                  </ul>
+                <div class="know-tabs">
+                  <a href="javascript:void(0)" class="know-tabs-item active">
+                    показания к проведению
+                  </a>
+                  <a href="javascript:void(0)" class="know-tabs-item">
+                    ограничения
+                  </a>
+                  <a href="javascript:void(0)" class="know-tabs-item important">
+                    противопоказания
+                  </a>
                 </div>
               </div>
-            </div>
-            <div class="warning-inner">
-              <div class="know-warning">
-                <div class="alert">Важно!</div>
-                <span>*</span> - перед записью на исследование кардиологу/терапевту целесообразно обсудить показания и
-                планируемую
-                тактику
+              <div class="know-content">
+                <div class="row">
+                  <div class="col-md-6">
+                    <ul>
+                      <li>
+                        Диагностика ишемической болезни сердца (ИБС) 
+                      </li>
+                      <li>
+                        Оценка качества и эффективности лечения после реваскуляризации миокарда
+                      </li>
+                      <li>
+                        Предоперационная оценка риска перед проведением экстракардиальных операций (развитие инфаркта
+                        миокарда является одним из самых частых осложнений в ранний послеоперационный период у пациентов
+                        со средним и высоким риском)
+                      </li>
+                      <li>
+                        Оценка недостаточности клапанов
+                        (их гемодинамической значимости)*
+                      </li>
+                      <li>
+                        Оценка латентной обструкции ВТЛЖ” (выносящего тракта левого желудочка) при гипертрофии левого
+                        желудочка*
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <ul>
+                      <li>
+                        Неинформативная нагрузочная проба (наличие БЛНПГ” (блокада левых ножек пучка Гиса),
+                        электролитные
+                        нарушения, исходные изменения сегмента ST и т.д.) 
+                      </li>
+                      <li>
+                        Оценка прогноза и выработка тактики ведения пациентов с установленным диагнозом ИБС (особенно с
+                        ПИКС” (постинфарктный кардиосклероз))
+                      </li>
+                      <li>
+                        Определение бассейна стенозированной коронарной артерии перед проведением эндоваскулярного
+                        вмешательства
+                      </li>
+                      <li>
+                        Выявление возможных кардиальных причин в развитии одышки при физической нагрузке (особенно у
+                        пациентов с СД” (сахарный диабет))
+                      </li>
+                      <li>
+                        Оценка клапанных стенозов и функции протезированных клапанов*
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="warning-inner">
+                <div class="know-warning">
+                  <div class="alert">Важно!</div>
+                  <span>*</span> - перед записью на исследование кардиологу/терапевту целесообразно обсудить показания и
+                  планируемую
+                  тактику
+                </div>
               </div>
             </div>
           </div>
         </div>
+
       </section>
       <section class="about">
         <div class="container">
@@ -258,13 +277,15 @@
                   Волкова Анна Леонидовна
                 </div>
                 <div class="about-main-desc">
-                  <span>
+                  <span class="text">
                     Врач-кардиолог
                   </span>
-                  <span>
+                  <span class="delimeter">|</span>
+                  <span class="text">
                     Cтаж 22 года
                   </span>
-                  <span>
+                  <span class="delimeter">|</span>
+                  <span class="text">
                     Обладатель статуса
                   </span>
                   <span class="status">
@@ -366,7 +387,6 @@
         </div>
       </div>
     </div>
-
   </section>
   </main>
   <!-- main screen end -->

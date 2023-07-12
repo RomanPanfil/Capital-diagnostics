@@ -146,7 +146,7 @@ img {
 	::-webkit-scrollbar {
 		width: 4px;
 		height: 4px;
-		background-color: $bgc;
+		background-color: $primary;
 	}
 	::-webkit-scrollbar-thumb {
 		width: 4px;
@@ -166,7 +166,7 @@ img {
 	line-height: 58px;
 	max-width: 100%;
 	position: relative;
-	border: none;
+	border: 1px solid $primary;;
 	border-radius: 95px;
 	padding-left: 30px;
 	padding-right: 30px;
@@ -183,12 +183,21 @@ img {
 	&.ui-btn-colored {
 		color: #FFF;
 		background-color: $primary;		
+		&:hover {
+			color: $primary;
+			background-color: transparent;
+			border: 1px solid $primary;
+		}
 	}	
 	&.ui-btn-transparent {
 		border-radius: 90px;
 		border: 1px solid $primary;
 		color: $primary;		
 		letter-spacing: 0.16px;
+		&:hover {
+			color: #FFF;
+			background-color: $primary;
+		}
 	}	
 
 	&:hover {
@@ -257,7 +266,7 @@ img {
 	input:invalid + span:before {
 		content: attr(placeholder);
 		position: relative;
-		color: #999;
+		color: #51647B;
 	}
 	  
 	input:invalid + span:after {

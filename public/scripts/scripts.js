@@ -41,8 +41,8 @@ const FARBA = {
     const map = new ymaps.Map(
       "map",
       {
-      center: [55.73017, 37.459038],
-      zoom: 19,
+      center: [55.729690, 37.461860],
+      zoom: 17,
       controls: [],  
       type: 'yandex#map', 
     }, 
@@ -57,7 +57,7 @@ const FARBA = {
 
   // Создание метки с пользовательской иконкой
   const myPlacemark = new ymaps.Placemark(
-    [55.730507, 37.457825,], // координаты метки
+    [55.730507, 37.457825], // координаты метки
     {
       hintContent: "Столичная диагностика", // подсказка при наведении на метку
       balloonContent: "Столичная диагностика", // содержимое балуна при клике на метку
@@ -73,20 +73,63 @@ const FARBA = {
   // Добавление метки на карту
   map.geoObjects.add(myPlacemark);
 }
-})()
+})();
+
+(function () {
+  if (!document.querySelector('.header-nav ul li:nth-child(1) a') || !document.querySelector('.appointment')) return
 
 
-// (function () {
-//   if (!document.querySelector('.screen-promo-btn.benefits') || !document.querySelector('.screen.screen-about-contest')) return
+  document.querySelector('.header-nav ul li:nth-child(1) a').addEventListener('click', (e) => {
+    e.preventDefault()
 
-//   document.querySelectorAll('.screen-promo-btn.benefits').forEach((el) => {
-//     el.addEventListener('click', (e) => {
-//       e.preventDefault()
-//       document.querySelector('.screen.screen-about-contest').scrollIntoView({behavior: "smooth"})
-//     })
-//   })
-// }());
+    document.querySelector('.appointment').scrollIntoView({behavior: "smooth"})
+  })
+})();
 
+(function () {
+  if (!document.querySelector('.header-nav ul li:nth-child(2) a') || !document.querySelector('.know')) return
+
+
+  document.querySelector('.header-nav ul li:nth-child(2) a').addEventListener('click', (e) => {
+    e.preventDefault()
+
+    document.querySelector('.know').scrollIntoView({behavior: "smooth"})
+  })
+})();
+
+(function () {
+  if (!document.querySelector('.header-nav ul li:nth-child(3) a') || !document.querySelector('.about')) return
+
+
+  document.querySelector('.header-nav ul li:nth-child(3) a').addEventListener('click', (e) => {
+    e.preventDefault()
+
+    document.querySelector('.about').scrollIntoView({behavior: "smooth"})
+  })
+})();
+
+(function () {
+  if (!document.querySelector('.header-nav ul li:nth-child(4) a') || !document.querySelector('.map')) return
+
+
+  document.querySelector('.header-nav ul li:nth-child(4) a').addEventListener('click', (e) => {
+    e.preventDefault()
+
+    document.querySelector('.map').scrollIntoView({behavior: "smooth"})
+  })
+})();
+
+(function () {
+  if (!document.querySelector('.header-contact .ui-btn') || !document.querySelector('.appointment-make')) return
+
+
+  document.querySelector('.header-contact .ui-btn').addEventListener('click', (e) => {
+    console.log('click');
+    e.preventDefault()
+
+    document.querySelector('.appointment-make').scrollIntoView({behavior: "smooth"})
+  })
+})();
 
 
 
