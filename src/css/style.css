@@ -3603,6 +3603,11 @@ img {
 .footer-logo {
   margin-right: 57px;
 }
+@media (max-width: 1024px) {
+  .footer-logo img {
+    max-width: 134px;
+  }
+}
 .footer-copy {
   color: #FFF;
   font-size: 16px;
@@ -3610,6 +3615,12 @@ img {
   font-weight: 400;
   margin-top: auto;
   margin-bottom: auto;
+}
+@media (max-width: 1024px) {
+  .footer-copy {
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
 }
 
 .ymaps-layers-pane {

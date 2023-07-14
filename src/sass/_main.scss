@@ -1201,6 +1201,11 @@
   }
   &-logo {
     margin-right: 57px;
+    img {
+      @media (max-width: 1024px) {
+        max-width: 134px;
+      }
+    }
   }
   &-copy {
     color: #FFF;
@@ -1208,6 +1213,9 @@
     font-weight: 400;   
     margin-top: auto;
     margin-bottom: auto;
+    @media (max-width: 1024px) {
+      @include fz(14); 
+    }
   }
 }
 
