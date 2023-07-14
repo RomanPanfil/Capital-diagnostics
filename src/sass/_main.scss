@@ -535,8 +535,23 @@
       .ui-btn-transparent {
         padding-left: 40px;
         padding-right: 40px;
+        @media (max-width: 1680px) {
+          height: 58px;
+          line-height: 58px;
+          @include fz(15);
+        }
+        @media (max-width: 960px) {
+          height: 58px;
+          line-height: 58px;
+          @include fz(13);
+        }        
         @media (max-width: 768px) {
           order: 1;
+        }
+        @media (max-width: 599px) {
+          height: 58px;
+          line-height: 58px;
+          @include fz(15);
         }
       }
       .agree {

@@ -53,7 +53,7 @@
         <div class="header-wrapper">
           <div class="header-logo">
             <a href="#">
-              <img src="./images/logo.png" alt="logo">
+              <img src="./images/logo.svg" alt="logo">
             </a>
           </div>
           <nav class="header-nav">
@@ -145,12 +145,14 @@
               <div class="col-sm-6 col-us-12">
                 <div class="appointment-card-image">
                   <picture>
-                    <source srcset="./images/doctors.jpg" media="(min-width: 1140px)">
-                    <source srcset="./images/doctors-2.jpg" media="(min-width: 769px)">
-                    <source srcset="./images/doctors.jpg" media="(min-width: 600px)">
-                    <img src="./images/doctors-2.jpg" alt="alt" loading="lazy" />
+                    <source srcset="./images/doctors.jpg" srcset="./images/doctors-2x.jpg 2x"
+                      media="(min-width: 1140px)">
+                    <source srcset="./images/doctors-2.jpg" srcset="./images/doctors-2-2x.jpg 2x"
+                      media="(min-width: 769px)">
+                    <source srcset="./images/doctors.jpg" srcset="./images/doctors-2x.jpg 2x"
+                      media="(min-width: 600px)">
+                    <img src="./images/doctors-2.jpg" srcset="./images/doctors-2-2x.jpg 2x" alt="alt" loading="lazy" />
                   </picture>
-                  <!-- <img src="./images/doctors.jpg" alt="doctors"> -->
                 </div>
               </div>
             </div>
@@ -159,10 +161,11 @@
             <div class="appointment-make">
               <div class="appointment-make-image">
                 <picture>
-                  <source srcset="./images/appointment.jpg" media="(min-width: 769px)">
-                  <img src="./images/appointment-sm.jpg" alt="alt" loading="lazy" />
+                  <source srcset="./images/appointment.jpg" srcset="./images/appointment-2x.jpg 2x"
+                    media="(min-width: 769px)">
+                  <img src="./images/appointment-sm.jpg" srcset="./images/appointment-sm-2x.jpg 2x" alt="alt"
+                    loading="lazy" />
                 </picture>
-                <!-- <img src="./images/appointment.jpg" alt="folder"> -->
               </div>
               <form class="appointment-make-form">
                 <div class="appointment-make-form__head">
@@ -289,7 +292,8 @@
             <div class="col-md-6">
               <div class="about-photo">
                 <img src="./images/about.svg" alt="about" class="about-photo-text">
-                <img src="./images/doctor.jpg" alt="doctor" class="about-photo-image">
+                <img src="./images/doctor.jpg" srcset="./images/doctor-2x.jpg 2x" alt="doctor"
+                  class="about-photo-image">
               </div>
             </div>
             <div class="col-md-6">
@@ -422,7 +426,7 @@
     <div class="container">
       <div class="flex">
         <div class="footer-logo">
-          <img src="./images/footer-logo.png" alt="logo">
+          <img src="./images/footer-logo.svg" alt="logo">
         </div>
         <div class="footer-copy">
           ООО "Столичная диагностика 32", Лицензия Л041-01133-32/00337821

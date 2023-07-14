@@ -2713,11 +2713,35 @@ img {
   padding-left: 40px;
   padding-right: 40px;
 }
+@media (max-width: 1680px) {
+  .appointment-make-form .ui-btn-transparent {
+    height: 58px;
+    line-height: 58px;
+    font-size: 15px;
+    font-size: 0.9375rem;
+  }
+}
+@media (max-width: 960px) {
+  .appointment-make-form .ui-btn-transparent {
+    height: 58px;
+    line-height: 58px;
+    font-size: 13px;
+    font-size: 0.8125rem;
+  }
+}
 @media (max-width: 768px) {
   .appointment-make-form .ui-btn-transparent {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+  }
+}
+@media (max-width: 599px) {
+  .appointment-make-form .ui-btn-transparent {
+    height: 58px;
+    line-height: 58px;
+    font-size: 15px;
+    font-size: 0.9375rem;
   }
 }
 .appointment-make-form .agree {
