@@ -3603,6 +3603,9 @@ img {
 .footer-logo {
   margin-right: 57px;
 }
+.footer-logo img {
+  max-width: 256px;
+}
 @media (max-width: 1024px) {
   .footer-logo img {
     max-width: 134px;

@@ -1202,6 +1202,7 @@
   &-logo {
     margin-right: 57px;
     img {
+      max-width: 256px;
       @media (max-width: 1024px) {
         max-width: 134px;
       }
