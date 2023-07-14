@@ -1988,10 +1988,23 @@ img {
       -ms-flex-align: center;
           align-items: center;
 }
+.header-logo {
+  position: relative;
+  z-index: 10;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
 @media (max-width: 420px) {
   .header-logo img {
     max-width: 178px;
   }
+}
+.header-logo svg path {
+  fill: #1A3B9F;
+}
+.header-logo.active svg path {
+  fill: #fff;
 }
 @media (max-width: 1280px) {
   .header-nav {
@@ -2186,7 +2199,13 @@ img {
 }
 @media (max-width: 768px) {
   .header-contact {
+    -webkit-transform: translateX(-150%);
+        -ms-transform: translateX(-150%);
+            transform: translateX(-150%);
     display: none;
+    -webkit-transition: 4s;
+    -o-transition: 4s;
+    transition: 4s;
   }
 }
 .header-phone {
@@ -2517,7 +2536,8 @@ img {
 }
 .appointment-make-image {
   overflow: hidden;
-  border-radius: 28px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
   margin-right: 60px;
 }
 @media (max-width: 1140px) {
@@ -2533,6 +2553,7 @@ img {
 }
 @media (max-width: 768px) {
   .appointment-make-image {
+    border-radius: 20px;
     width: 100%;
     margin-bottom: 20px;
   }

@@ -20,9 +20,24 @@
     align-items: center;
   }
   &-logo {
+    position: relative;
+    z-index: 10;
+    transition: 0.3s;
     img {
       @media (max-width: 420px) {
         max-width: 178px;
+      }
+    }
+    svg {
+      path {
+        fill: $primary;
+      }
+    }
+  }
+  &-logo.active {
+    svg {
+      path {
+        fill: #fff;
       }
     }
   }
@@ -156,9 +171,26 @@
       gap: 10px;
     }
     @media (max-width: 768px) {
+      transform: translateX(-150%);
       display: none;
+      transition: 4s;
     }
+    // &.active {
+    //   @media (max-width: 768px) {       
+    //     display: flex;
+    //     position: absolute;
+    //     z-index: 10;
+    //     flex-direction: column;
+    //     top: 78vh;    
+    //     transform: translateX(-50%);
+    //     margin-left: auto;
+    //     margin-right: auto;
+    //     display: block;
+    //     left: 50%;
+    //   }
+    // }
   }
+  
   &-phone {
     height: 58px;
     display: flex;
@@ -400,7 +432,8 @@
     
     &-image {
       overflow: hidden;
-      border-radius: 28px;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;      
       margin-right: 60px;
       @media (max-width: 1140px) {
         margin-right: 30px;
@@ -409,7 +442,8 @@
         width: 20%;
         margin-right: 20px;
       }
-      @media (max-width: 768px) {      
+      @media (max-width: 768px) {    
+        border-radius: 20px;  
         width: 100%;
         margin-bottom: 20px;
       }
