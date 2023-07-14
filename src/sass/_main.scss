@@ -292,6 +292,7 @@
       }
       &:nth-child(2) {       
         background: #FFDFDF;
+        white-space: nowrap;
       }
     }
   }
@@ -1099,7 +1100,7 @@
         @media (max-width: 1366px) {
           @include fz(14); 
         }
-        @media (max-width: 1366px) {
+        @media (max-width: 960px) {
           @include fz(12); 
         }
       }
@@ -1122,7 +1123,8 @@
         padding: 8px;
         box-shadow: 6px 4px 7px rgba(191, 191, 191, 0.09); 
         @media (max-width: 1366px) {
-          gap: 2px;
+          gap: 3px;
+          padding-top: 6px;
           svg {
             width: 14px;
           }
@@ -1140,31 +1142,32 @@
         padding-top: 6px;          
         &::-webkit-scrollbar {
           width: 0;
-           height: 0;
-        }       
+          height: 0;
+        }
         @media (max-width: 1366px) {
           @include fz(14); 
           gap: 7px;
-          padding-top: 8px;
+          padding-top: 9px;
         }  
         @media (max-width: 960px) {
           @include fz(12);        
           gap: 10px;
+          width: 100%;
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 20px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+          }
         }
-        @media (max-width: 768px) {
-          overflow: auto; 
-        }
-        &::after {
-          content: "";
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          right: 0;
-          width: 20px;
-          background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
-        }
+        @media (max-width: 960px) {
+          overflow: auto;           
+        }        
         span {    
-          @media (max-width: 768px) {
+          @media (max-width: 960px) {
             white-space: nowrap;
             overflow: auto;      
             padding-right: 15px;    

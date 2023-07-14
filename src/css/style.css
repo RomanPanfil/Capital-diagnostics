@@ -2371,6 +2371,7 @@ img {
 }
 .appointment-description span:nth-child(2) {
   background: #FFDFDF;
+  white-space: nowrap;
 }
 .appointment-card {
   padding-bottom: 160px;
@@ -3465,7 +3466,7 @@ img {
     font-size: 0.875rem;
   }
 }
-@media (max-width: 1366px) {
+@media (max-width: 960px) {
   .map-info-subway .text {
     font-size: 12px;
     font-size: 0.75rem;
@@ -3504,7 +3505,8 @@ img {
 }
 @media (max-width: 1366px) {
   .map-info .address .icon {
-    gap: 2px;
+    gap: 3px;
+    padding-top: 6px;
   }
   .map-info .address .icon svg {
     width: 14px;
@@ -3538,7 +3540,7 @@ img {
     font-size: 14px;
     font-size: 0.875rem;
     gap: 7px;
-    padding-top: 8px;
+    padding-top: 9px;
   }
 }
 @media (max-width: 960px) {
@@ -3546,25 +3548,26 @@ img {
     font-size: 12px;
     font-size: 0.75rem;
     gap: 10px;
+    width: 100%;
+  }
+  .map-info .address .text::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(white));
+    background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0), white);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), white);
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .map-info .address .text {
     overflow: auto;
   }
 }
-.map-info .address .text::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 20px;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(white));
-  background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0), white);
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), white);
-}
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .map-info .address .text span {
     white-space: nowrap;
     overflow: auto;
