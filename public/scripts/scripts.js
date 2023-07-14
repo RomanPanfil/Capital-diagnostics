@@ -51,6 +51,15 @@ const FARBA = {
     }
   );
 
+  window.addEventListener('resize', function() {
+    if (window.innerWidth < 1366) {
+        map.setCenter([55.7301509370965, 37.4586638207038], 18);
+    }
+    if (window.innerWidth < 768) {
+        map.setCenter([55.729787827833874, 37.45786724529712], 18);
+    }
+});
+
  
   // Отключение перетаскивания и прокрутки карты
   map.behaviors.disable(["drag", "scrollZoom"]);
@@ -173,20 +182,20 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-  $("#appointment_phone").inputmask("+7(999)-999-9999");
+  $("#appointment_phone").inputmask("+7(999)-999-9999", { showMaskOnHover: false });
 });
 
 // бургер-меню
-// (function() {
-//   if(!document.querySelector('.burger-btn') || !document.querySelector('.header-nav ul')) return
+(function() {
+  if(!document.querySelector('.burger-btn') || !document.querySelector('.header-nav ul')) return
 
-//   const menuBtn = document.querySelector('.burger-btn');
-//   const menu = document.querySelector('.header-nav ul');
+  const menuBtn = document.querySelector('.burger-btn');
+  const menu = document.querySelector('.header-nav ul');
 
-//   menuBtn.addEventListener('click', openMenu);
+  menuBtn.addEventListener('click', openMenu);
 
-//   function openMenu() {
-//     menu.classList.toggle('active')
-//     document.querySelector('.burger-btn span').classList.toggle('active')
-//   }
-// })();
+  function openMenu() {
+    menu.classList.toggle('active')
+    document.querySelector('.burger-btn span').classList.toggle('active')
+  }
+})();

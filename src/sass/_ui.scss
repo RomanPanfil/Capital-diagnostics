@@ -33,28 +33,32 @@ h1, .h1 {
 	// }
 
 	@media (max-width: 1680px) {
-		@include fz(86);
+		@include fz(110);
 	}
 
 	@media (max-width: 1366px) {
-		@include fz(70);
+		@include fz(100);
 	}
 
 	@media (max-width: 1140px) {
-		@include fz(56);
+		@include fz(90);
 	}
 
 	@media (max-width: 959px) {
-		@include fz(52);
+		@include fz(69);
 		line-height: 1.1;
 	}
 
 	@media (max-width: 768px) {
-		@include fz(54);
+		@include fz(60);
 		line-height: 1.1;
 	}
 
 	@media (max-width: 599px) {
+		@include fz(46);
+		line-height: 1.14;
+	}
+	@media (max-width: 360px) {
 		@include fz(42);
 		line-height: 1.14;
 	}
@@ -180,6 +184,21 @@ img {
 	font-weight: 700;
 	cursor: pointer;
 	transition: .2s;
+	@media (max-width: 1680px) {
+		height: 50px;
+		line-height: 50px;
+		@include fz(15);
+	}
+	@media (max-width: 960px) {
+		height: 46px;
+		line-height: 46px;
+		@include fz(13);
+	}
+	@media (max-width: 599px) {
+		height: 50px;
+		line-height: 50px;
+		@include fz(15);
+	}
 	&.ui-btn-colored {
 		color: #FFF;
 		background-color: $primary;		
@@ -242,14 +261,17 @@ img {
 	.ui-input {
 		color: $font;
 		@include fz(16);      		
-		font-weight: 400;
-		padding: 20px 40px;
+		font-weight: 400;		
 		width: 100%;		
 		outline: none;    
 		border: none;
 		border: none;
 		padding: 20px 40px;
-		outline: none;			
+		outline: none;		
+		@media (max-width: 1366px) {
+			@include fz(15);
+			padding: 20px 25px; 
+		}	
       &.error {
         margin-bottom: 0px;
       } 

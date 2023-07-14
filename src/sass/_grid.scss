@@ -211,11 +211,23 @@
     margin-left: 0;
     margin-right: 0;
   }
+  @media (max-width: 1366px) {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 }
 [class*="col-"] {
   width: 100%;
   padding-left: $col_gutter;
   padding-right: $col_gutter;
+  @media (max-width: 1366px) {
+   padding-left: 10px;
+   padding-right: 10px;
+  }
 }
 // .inner, .container {
 //   max-width: $inner+px;
