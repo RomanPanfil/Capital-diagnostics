@@ -3030,12 +3030,16 @@ img {
           transform: translateY(-50%);
 }
 .know-content {
+  display: none;
   padding: 60px 40px;
   background-color: #fff;
   border-radius: 28px;
   -webkit-box-shadow: 0px 0px 51px 0px rgba(26, 59, 159, 0.07);
           box-shadow: 0px 0px 51px 0px rgba(26, 59, 159, 0.07);
   margin-bottom: 78px;
+}
+.know-content.active {
+  display: block;
 }
 @media (max-width: 1366px) {
   .know-content {

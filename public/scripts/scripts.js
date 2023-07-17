@@ -212,3 +212,33 @@ function toggleBurgerMenu() {
   menuBtn.addEventListener('click', toggleBurgerMenu);
   
 })();
+
+
+// переключение табов
+
+(function () {
+  const tabsContainer = document.querySelector('.know-tabs');
+  const tabs = document.querySelectorAll('.know-tabs-item');
+  const contents = document.querySelectorAll('.know-content');
+
+  if (!tabsContainer || !contents) return;
+
+  tabsContainer.addEventListener('click', (event) => {
+    const clickedTab = event.target;
+    if (!clickedTab.classList.contains('know-tabs-item')) return;
+
+    tabs.forEach((tab) => {
+      tab.classList.remove('active');
+    });
+    clickedTab.classList.add('active');
+
+    const activeTab = clickedTab.getAttribute('data-tab');
+    contents.forEach((content) => {
+      content.classList.remove('active');
+    });
+    const activeContent = document.querySelector(`#${activeTab}`);
+    if (activeContent) {
+      activeContent.classList.add('active');
+    }
+  });
+})();

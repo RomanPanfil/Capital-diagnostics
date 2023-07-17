@@ -789,11 +789,15 @@
     }
   }
   &-content {
+    display: none;
     padding: 60px 40px;
     background-color: #fff;
     border-radius: 28px;    
     box-shadow: 0px 0px 51px 0px rgba(26, 59, 159, 0.07);
     margin-bottom: 78px;
+    &.active {
+      display: block;
+    }
     @media (max-width: 1366px) {
       padding: 40px 30px;
     }
