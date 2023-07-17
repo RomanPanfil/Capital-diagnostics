@@ -197,6 +197,8 @@ function toggleBurgerMenu() {
     document.querySelector('.burger-btn span').classList.toggle('active');
     document.querySelector('.header-logo').classList.toggle('active');
     document.querySelector('.header-contact').classList.toggle('active');
+
+    document.body.style.overflow =  document.querySelector('.header-nav ul.active') ? 'hidden' : '';
   }  
 };
 
