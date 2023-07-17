@@ -89,8 +89,9 @@ const FARBA = {
 
 
   document.querySelector('.header-nav ul li:nth-child(1) a').addEventListener('click', (e) => {
-    e.preventDefault()
+    e.preventDefault()   
 
+    toggleBurgerMenu()
     document.querySelector('.appointment').scrollIntoView({behavior: "smooth"})
   })
 })();
@@ -102,6 +103,7 @@ const FARBA = {
   document.querySelector('.header-nav ul li:nth-child(2) a').addEventListener('click', (e) => {
     e.preventDefault()
 
+    toggleBurgerMenu();
     document.querySelector('.know').scrollIntoView({behavior: "smooth"})
   })
 })();
@@ -113,6 +115,7 @@ const FARBA = {
   document.querySelector('.header-nav ul li:nth-child(3) a').addEventListener('click', (e) => {
     e.preventDefault()
 
+    toggleBurgerMenu()
     document.querySelector('.about').scrollIntoView({behavior: "smooth"})
   })
 })();
@@ -124,6 +127,7 @@ const FARBA = {
   document.querySelector('.header-nav ul li:nth-child(4) a').addEventListener('click', (e) => {
     e.preventDefault()
 
+    toggleBurgerMenu()
     document.querySelector('.map').scrollIntoView({behavior: "smooth"})
   })
 })();
@@ -136,6 +140,7 @@ const FARBA = {
     console.log('click');
     e.preventDefault()
 
+    toggleBurgerMenu()
     document.querySelector('.appointment-make').scrollIntoView({behavior: "smooth"})
   })
 })();
@@ -186,18 +191,22 @@ $(document).ready(function () {
 });
 
 // бургер-меню
+function toggleBurgerMenu() {
+  if (document.querySelector('.header-nav ul') && document.querySelector('.burger-btn span') && document.querySelector('.header-logo') && document.querySelector('.header-contact')) {
+    document.querySelector('.header-nav ul').classList.toggle('active');
+    document.querySelector('.burger-btn span').classList.toggle('active');
+    document.querySelector('.header-logo').classList.toggle('active');
+    document.querySelector('.header-contact').classList.toggle('active');
+  }  
+};
+
+
 (function() {
   if(!document.querySelector('.burger-btn') || !document.querySelector('.header-nav ul')) return
 
   const menuBtn = document.querySelector('.burger-btn');
   const menu = document.querySelector('.header-nav ul');
 
-  menuBtn.addEventListener('click', openMenu);
-
-  function openMenu() {
-    menu.classList.toggle('active')
-    document.querySelector('.burger-btn span').classList.toggle('active')
-    document.querySelector('.header-logo').classList.toggle('active')
-    document.querySelector('.header-contact').classList.toggle('active')
-  }
+  menuBtn.addEventListener('click', toggleBurgerMenu);
+  
 })();

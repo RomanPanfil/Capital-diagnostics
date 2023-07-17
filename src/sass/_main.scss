@@ -123,7 +123,8 @@
         position: absolute;       
         background-color: $primary;
         flex-direction: column;
-        justify-content: center;
+        // justify-content: center;
+        padding-top: 151px;
         gap: 20px;
         top: 0;
         left: 0;
@@ -151,11 +152,11 @@
           font-weight: 700;   
           @media (max-width: 1680px) {
             @include fz(14);  
-          }
+          }          
           @media (max-width: 1280px) {
-            @include fz(16); 
-            color: #fff;           
-          }   
+            @include fz(20); 
+            color: #fff;  
+          } 
         }
       }
     }    
@@ -166,29 +167,63 @@
     @media (max-width: 1280px) {
       margin-left: auto;
       margin-right: 10px;
+      transform: translateX(-200%);
+      position: absolute;
+      transition: 0.4s;
     }
     @media (max-width: 960px) {
       gap: 10px;
     }
-    @media (max-width: 768px) {
-      transform: translateX(-150%);
-      display: none;
-      transition: 4s;
-    }
-    // &.active {
-    //   @media (max-width: 768px) {       
-    //     display: flex;
-    //     position: absolute;
-    //     z-index: 10;
-    //     flex-direction: column;
-    //     top: 78vh;    
-    //     transform: translateX(-50%);
-    //     margin-left: auto;
-    //     margin-right: auto;
-    //     display: block;
-    //     left: 50%;
-    //   }
+    // @media (max-width: 768px) {
+    //   transform: translateX(-200%);
+    //   position: absolute;
+    //   transition: 0.4s;
     // }
+    &.active {
+      @media (max-width: 1280px) {       
+        display: flex;
+        position: absolute;
+        z-index: 10;
+        flex-direction: column;
+        top: 78vh;    
+        transform: translateX(-50%);
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        left: 50%;
+        width: 80vw;
+        max-width: 280px;
+        text-align: center;
+      }
+      .header-phone {
+        justify-content: center;
+        align-items: center;        
+        height: 53px;
+        margin-bottom: 10px;
+        &__icon {
+          background-color: #fff;
+          svg {            
+            path {
+              fill: $primary;
+            }
+          }
+        }
+        &__num {
+          color: #fff;
+          @include fz(15);
+        }
+        &__time {
+          @include fz(11);
+        }
+      } 
+      .header-contact-appointment {
+        background-color: #fff;
+        border-color: #fff;
+        color: $primary;
+        width: 80vw;
+        max-width: 280px;
+      }     
+    }
   }
   
   &-phone {
