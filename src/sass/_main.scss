@@ -1143,8 +1143,27 @@
         margin-right: 24px;        
         width: 48px;
         height: 48px;   
-        box-shadow: 6px 4px 7px rgba(191, 191, 191, 0.09);  
-        fill: #FFF;
+        box-shadow: 6px 4px 7px rgba(191, 191, 191, 0.09); 
+        // box-shadow: 9px 14px 18px -12px rgba(34, 60, 80, 0.2);
+        fill: #FFF;      
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translate(-50%, 100%);
+          width: 0;
+          height: 0;
+          border: 0 solid transparent;
+          border-left-width: 6px;
+          border-right-width: 6px;
+          border-top: 8px solid #FFF;  
+          @media (max-width: 1366px) {
+            border-top: 5px solid #FFF;  
+            border-left-width: 3px;
+            border-right-width: 3px;
+          }         
+        }
         @media (max-width: 1366px) {
           width: 30px;
           height: 30px;
@@ -1197,12 +1216,34 @@
           gap: 4px;
         }
         &__icon {
+          position: relative;
           padding: 12px;
+          box-shadow: 6px 0px 7px rgba(191, 191, 191, 0.09);
+          &.last {
+            box-shadow: 6px 7px 7px rgba(191, 191, 191, 0.09);   
+            &::after {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              transform: translate(-50%, 100%);
+              width: 0;
+              height: 0;
+              border: 0 solid transparent;
+              border-left-width: 6px;
+              border-right-width: 6px;
+              border-top: 8px solid #FFF;  
+              @media (max-width: 1366px) {
+                border-top: 5px solid #FFF;  
+                border-left-width: 3px;
+                border-right-width: 3px;
+              }       
+            }
+          }
           @media (max-width: 1366px) {
             padding: 6px;
           }
-          // border: 1px solid red;
-          box-shadow: 6px 0px 7px rgba(191, 191, 191, 0.09); 
+          // border: 1px solid red;                     
           svg {
             width: 24px;
             height: 24px;
