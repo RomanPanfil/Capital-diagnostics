@@ -91,9 +91,12 @@ const FARBA = {
   document.querySelector('.header-nav ul li:nth-child(1) a').addEventListener('click', (e) => {
     e.preventDefault()   
 
-    toggleBurgerMenu();
-    document.body.style.overflow = '';
-    
+    if (window.innerWidth <= 1280) {
+      toggleBurgerMenu();
+    } else {
+      document.body.style.overflow = '';
+    }   
+
     document.querySelector('.appointment').scrollIntoView({behavior: "smooth"})
   })
 })();
@@ -105,8 +108,11 @@ const FARBA = {
   document.querySelector('.header-nav ul li:nth-child(2) a').addEventListener('click', (e) => {
     e.preventDefault()
 
-    toggleBurgerMenu();
-    document.body.style.overflow = '';
+    if (window.innerWidth <= 1280) {
+      toggleBurgerMenu();
+    } else {
+      document.body.style.overflow = '';
+    }   
 
     document.querySelector('.know').scrollIntoView({behavior: "smooth"})
   })
@@ -119,8 +125,11 @@ const FARBA = {
   document.querySelector('.header-nav ul li:nth-child(3) a').addEventListener('click', (e) => {
     e.preventDefault()
 
-    toggleBurgerMenu();
-    document.body.style.overflow = '';
+    if (window.innerWidth <= 1280) {
+      toggleBurgerMenu();
+    } else {
+      document.body.style.overflow = '';
+    }   
 
     document.querySelector('.about').scrollIntoView({behavior: "smooth"})
   })
@@ -133,8 +142,11 @@ const FARBA = {
   document.querySelector('.header-nav ul li:nth-child(4) a').addEventListener('click', (e) => {
     e.preventDefault()
 
-    toggleBurgerMenu();
-    document.body.style.overflow = '';
+    if (window.innerWidth <= 1280) {
+      toggleBurgerMenu();
+    } else {
+      document.body.style.overflow = '';
+    }   
 
     document.querySelector('.map').scrollIntoView({behavior: "smooth"})
   })
@@ -148,8 +160,11 @@ const FARBA = {
     console.log('click');
     e.preventDefault();
 
-    toggleBurgerMenu();
-    document.body.style.overflow = '';
+    if (window.innerWidth <= 1280) {
+      toggleBurgerMenu();
+    } else {
+      document.body.style.overflow = '';
+    }
 
     document.querySelector('.appointment-make').scrollIntoView({behavior: "smooth"})
   })
