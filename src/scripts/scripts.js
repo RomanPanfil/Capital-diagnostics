@@ -91,7 +91,9 @@ const FARBA = {
   document.querySelector('.header-nav ul li:nth-child(1) a').addEventListener('click', (e) => {
     e.preventDefault()   
 
-    toggleBurgerMenu()
+    toggleBurgerMenu();
+    document.body.style.overflow = '';
+    
     document.querySelector('.appointment').scrollIntoView({behavior: "smooth"})
   })
 })();
@@ -104,6 +106,8 @@ const FARBA = {
     e.preventDefault()
 
     toggleBurgerMenu();
+    document.body.style.overflow = '';
+
     document.querySelector('.know').scrollIntoView({behavior: "smooth"})
   })
 })();
@@ -115,7 +119,9 @@ const FARBA = {
   document.querySelector('.header-nav ul li:nth-child(3) a').addEventListener('click', (e) => {
     e.preventDefault()
 
-    toggleBurgerMenu()
+    toggleBurgerMenu();
+    document.body.style.overflow = '';
+
     document.querySelector('.about').scrollIntoView({behavior: "smooth"})
   })
 })();
@@ -127,7 +133,9 @@ const FARBA = {
   document.querySelector('.header-nav ul li:nth-child(4) a').addEventListener('click', (e) => {
     e.preventDefault()
 
-    toggleBurgerMenu()
+    toggleBurgerMenu();
+    document.body.style.overflow = '';
+
     document.querySelector('.map').scrollIntoView({behavior: "smooth"})
   })
 })();
@@ -138,9 +146,11 @@ const FARBA = {
 
   document.querySelector('.header-contact .ui-btn').addEventListener('click', (e) => {
     console.log('click');
-    e.preventDefault()
+    e.preventDefault();
 
-    toggleBurgerMenu()
+    toggleBurgerMenu();
+    document.body.style.overflow = '';
+
     document.querySelector('.appointment-make').scrollIntoView({behavior: "smooth"})
   })
 })();
