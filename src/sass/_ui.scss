@@ -245,6 +245,10 @@ img {
 		transform: translateY(-50%);
 		left: 40px;	
 		cursor: text;
+		@include fz(16);
+		@media (max-width: 1366px) {
+			@include fz(15);
+		}	
 	}
 	
 	
